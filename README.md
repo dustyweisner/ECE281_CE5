@@ -16,3 +16,14 @@ __*PART ONE*__
 
 
 Because there is no initialize instruction, MIPS actually just adds what is already in the register (0 if initializing) with whatever it wants to initialize the register with.
+
+
+__*PART TWO*__
+
+
+|CODE|op|rs|rt|rd|shamt|funct|TYPE|
+|:----------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|addi $S0, $S0, 0x002C|001000|10000|10000|00000|00000|101100|I|
+|addi $S1, $S1, 0xFFDB|001000|
+|add $S0, $S1, $S2|000000|
+|sw $S2, 0x0054($0)|110000|
