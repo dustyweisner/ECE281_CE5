@@ -9,8 +9,8 @@ __*PART ONE*__
 
 |CODE|COMMENTS|
 |:-----------------------|:------------------------|
-|addi $S0, $S0, 0x002C|#Stores S0 + 44 into S0|
-|addi $S1, $S1, 0xFFDB|#Stores S1 - 37 into S1|
+|addi $S0, $0, 0x002C|#Stores 0 + 44 into S0|
+|addi $S1, $0, 0xFFDB|#Stores 0 - 37 into S1|
 |add $S0, $S1, $S2|#Stores S0 + S1 into S2|
 |sw $S2, 0x0054($0)|#Stores S2 into hexadecimal memory address x54|
 
