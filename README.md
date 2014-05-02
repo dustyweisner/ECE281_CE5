@@ -29,7 +29,11 @@ __*PART TWO*__
 |sw $S2, 0x0054($0)|101011|00000|10010|00000|00000|110100|I|0xAC120054|
 
 
+Below is the waveform that the instructions above created:
+
 
 ![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Part2_Waveform.GIF?raw=true)
 
+
+According to the waveform, my istructions did what they were supposed to. 
 
