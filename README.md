@@ -29,6 +29,7 @@ __*PART TWO*__
 |sw $S2, 0x0054($0)|101011|00000|10010|00000|00000|110100|I|0xAC120054|
 
 
-![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Part2_Waveform.GIF=raw?)
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Part2_Waveform.GIF?raw=true)
 
 
