@@ -36,3 +36,18 @@ Below is the waveform that the instructions above created:
 
 
 According to the waveform, my instructions did what they were supposed to. If you look at wd, it shows each value that is being stored in their registers. 44-37 = 7, and from 20 to 30 ns, 00000007 is stored, which is the value of the two added registers.
+
+
+__*PART THREE*__
+
+
+Below are the Main Decoder, ALU Decoder, and Schematic Modifications respectively, altered so that the MIPS assembly includes the instruction "ORI":
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/MainDecoder.png?raw=true)
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/ALUDecoder.png?raw=true)
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Schematic_Modification.GIF?raw=true)
+
+Because I have to make the ORI instruction immediate, I made a "Zero Extend" so that it changed the number to a 32 bit number with out changing the number. Then I added to the MUX, and Added another bit to the ALUsrc.
+
