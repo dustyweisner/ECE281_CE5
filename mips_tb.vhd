@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
--- Company: USAFA
--- Engineer: Dusty Weisner
+-- Company: 
+-- Engineer:
 --
 -- Create Date:   00:49:40 05/02/2014
 -- Design Name:   
@@ -97,7 +97,9 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-
+		reset <= '1';
+		wait for clk_period;
+		reset <= '0';
       -- insert stimulus here 
 		instr <= X"2010002C"; 
 		wait for clk_period; 
@@ -110,6 +112,10 @@ BEGIN
 		
 		instr <= X"AC120054"; 
 		wait for clk_period; 
+
+		instr <= X"3612FFDB"; --ORI of -37 with 44(already stored in $S0)
+		wait for clk_period;	 -- into $S0 
+
 
 		instr <= X"00000000"; 
 
