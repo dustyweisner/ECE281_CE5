@@ -51,3 +51,12 @@ Below are the Main Decoder, ALU Decoder, and Schematic Modifications respectivel
 
 Because I have to make the ORI instruction immediate, I made a "Zero Extend" so that it changed the number to a 32 bit number with out changing the number. Then I added to the MUX, and Added another bit to the ALUsrc.
 
+To do that in vhdl was an entirely different story. First I had to go through and change all of the alusrc signals to STD_LOGIC_VECTOR(1 downto 0). Then I had to add the ORI instruction to both the Main and ALU decoder, which can be viewed in "Mips.vhd" on the ECE281_CE5 homepage. After doing so I made sure that there were now 10 instead of 9 controls because the alusrc was now 2 bits. Then I had to copy a mux but make it a mux of 4 bits and declare it and make its architecture. After that I changed the behavior of the mux, and I made the zero extend architecture and declaration. Finally I changed the ALU input to the new 4 bit mux. I added the following code to the testbench to demosntrate an ORI instruction:
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Code_Test.GIF?raw=true)
+
+After inserting all of the changes into the Mips assembly program, I tested the resulting waveform as shown below:
+
+![](https://github.com/dustyweisner/ECE281_CE5/blob/master/Part3_Waveform.GIF?raw=true)
+
+I knew that this waveform did as expected because I looked at the memory address which showed the correct answer to the ORI of -37 and 44. The answer was "0000ffff" because -37 (0000000000101100) or 44 (1111111111011011) is -1 (1111111111111111), which is also ffff, but since it needs to be a 32 bit number, the ORI instruction that I created now extends the rest of the number to 0000ffff.
